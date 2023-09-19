@@ -2,26 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  body {
+    color: rgb(var(--foreground-rgb));
+    background-color: #101010;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  .bg-screen {
+    background: url("/screen-bg.png");
+  }
+
+  .text-grad {
+    background-image: linear-gradient(to right, #026f47, #bd322c, #b99548);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .btn-grad {
+    background-image: linear-gradient(110deg, #026f47 30%, #bd322c, #b99548);
+  }
+  .text-green-grad {
+    background: var(
+      --Text-Color,
+      linear-gradient(
+        180deg,
+        rgba(0, 122, 77, 0.9) 0%,
+        rgba(247, 180, 20, 0.9) 100%
+      )
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .bg-hero {
+    background-image: url("/hero-blur.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .breaker {
+    background-image: url("/wave.svg");
+    background-size: cover;
+    background-attachment: fixed;
+  }
 }
