@@ -33,6 +33,13 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  .green-grad {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 122, 77, 0.9) 0%,
+      rgba(247, 180, 20, 0.9) 100%
+    );
+  }
   .bg-hero {
     background-image: url("/hero-blur.svg");
     background-position: center;

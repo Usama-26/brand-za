@@ -2,9 +2,13 @@ import Image from "next/image";
 import { Inter, Ubuntu } from "next/font/google";
 
 import MobileNavbar from "@/components/NavbarMobile";
+import { BsTwitter } from "react-icons/bs";
+import { FaFacebookF } from "react-icons/fa6";
+import { ImInstagram } from "react-icons/im";
 import { BiDownload } from "react-icons/bi";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
+import { FiFacebook, FiTwitch, FiTwitter } from "react-icons/fi";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const ubuntu = Ubuntu({
@@ -24,6 +28,7 @@ export default function Home() {
       <Offer />
       <CTA />
       <DownloadApp />
+      <Footer />
     </div>
   );
 }
@@ -106,7 +111,7 @@ function Brandza() {
 
 function Offer() {
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto flex gap-32 px-40 py-20">
+    <div className="container 2xl:max-w-screen-2xl mx-auto flex gap-32 px-40 py-20 text-white">
       <div className="mt-20">
         <h6 className="uppercase font-medium text-green-grad tracking-wider">
           we offer
@@ -114,9 +119,24 @@ function Offer() {
         <h1 className="font-ubuntu text-5xl text-white my-4">
           Your Brand, Your Way
         </h1>
-        <p className="text-paragraph">
+        <p className="text-paragraph mb-4">
           {`Empower your brand with our versatile solutions. Our white-label platform allows you to customize to your heart's content, while our advertising banner puts your message front and center. Take control of your brand's destiny today.`}
         </p>
+
+        <div className="flex flex-wrap gap-4">
+          <span className="inline-flex items-center">
+            <span className="h-1 w-8 green-grad inline-block mr-2 rounded-lg"></span>
+            <span>Feature your brand</span>
+          </span>
+          <span className="inline-flex items-center">
+            <span className="h-1 w-8 green-grad inline-block mr-2 rounded-lg"></span>
+            <span>Advertising Banner</span>
+          </span>
+          <span className="inline-flex items-center">
+            <span className="h-1 w-8 green-grad inline-block mr-2 rounded-lg"></span>
+            <span>White-labeled version for your country & brand</span>
+          </span>
+        </div>
       </div>
       <Image
         src={"/hero-mockup.png"}
@@ -238,5 +258,131 @@ function DownloadApp() {
         className="absolute bottom-0 right-0"
       />
     </div>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className=" ">
+      <div className="border-y border-dashed mt-32">
+        <div className="container 2xl:max-w-screen-2xl px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+          <div className="w-1/3 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+            <Link href={"/"}>
+              <Image
+                src={"/brand-za-logo.png"}
+                height={110}
+                width={135}
+                alt="Company Logo"
+                className="w-20 object-cover"
+              />
+            </Link>
+            <p className="mt-2 text-sm text-gray-500">
+              Start your brand journey today and embrace the world of ZA brands.
+              Download now
+            </p>
+
+            <div className="flex -ml-7">
+              <Link href={"#"}>
+                <Image
+                  src={"/app-store.png"}
+                  width={310}
+                  height={140}
+                  alt="App store button"
+                />
+              </Link>
+              <Link href={"#"}>
+                <Image
+                  src={"/google-play.png"}
+                  width={310}
+                  height={140}
+                  alt="playstore button"
+                />
+              </Link>
+            </div>
+          </div>
+          <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 className="title-font font-medium text-heading tracking-widest text-lg mb-3">
+                Company
+              </h2>
+              <nav className="list-none mb-10 space-y-4">
+                <li>
+                  <Link
+                    href={"#"}
+                    className="text-gray-400 hover:text-gray-100"
+                  >
+                    How it works
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={"#"}
+                    className="text-gray-400 hover:text-gray-100"
+                  >
+                    Download Now
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={"#"}
+                    className="text-gray-400 hover:text-gray-100"
+                  >
+                    Contact Us
+                  </Link>
+                </li>
+              </nav>
+            </div>
+            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 className="title-font font-medium text-heading tracking-widest text-lg mb-3">
+                Contact
+              </h2>
+              <nav className="list-none mb-10 space-y-4">
+                <li>
+                  <Link
+                    href={"#"}
+                    className="text-gray-400 hover:text-gray-100"
+                  >
+                    brandza@gmail.com
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={"#"}
+                    className="text-gray-400 hover:text-gray-100"
+                  >
+                    +0276567897
+                  </Link>
+                </li>
+              </nav>
+            </div>
+            <div className="lg:w-1/4 md:w-1/2 w-full  md:ml-20">
+              <h2 className="title-font font-medium text-heading tracking-widest text-lg mb-3">
+                Follow us
+              </h2>
+              <div className="flex gap-4">
+                <Link href={"#"} className="rounded-full p-2 green-grad">
+                  <FaFacebookF className="w-4 h-4" />
+                </Link>
+                <Link href={"#"} className="rounded-full p-2 green-grad">
+                  <BsTwitter className="w-4 h-4" />
+                </Link>
+                <Link href={"#"} className="rounded-full p-2 green-grad">
+                  <ImInstagram className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container mx-auto py-4 px-5 flex justify-between flex-wrap flex-col sm:flex-row text-gray-100 text-sm">
+        <p className=" text-center sm:text-left">
+          Copyrights 2023 @ All Rights Reserved
+        </p>
+        <span>
+          Crafted by <Link href={"mrrobotdev.com"}>mrrobotdev.com</Link>
+        </span>
+      </div>
+    </footer>
   );
 }
