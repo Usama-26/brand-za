@@ -19,10 +19,13 @@ const ubuntu = Ubuntu({
 
 export default function Home() {
   return (
-    <div className={`${inter.variable} ${ubuntu.variable} bg-screen`}>
+    <div
+      className={`${inter.variable} ${ubuntu.variable} bg-screen text-paragraph font-inter`}
+    >
       <MobileNavbar />
       <Navbar />
       <Hero />
+      <Features />
       <div className="breaker"></div>
       <Brandza />
       <Offer />
@@ -66,6 +69,78 @@ function Hero() {
   );
 }
 
+function Features() {
+  return (
+    <div className="container 2xl:max-w-screen-2xl mx-auto px-10 py-10 md:py-20 ">
+      <span className="h-1 w-8 btn-grad inline-block mr-2 rounded-lg"></span>
+      <h2 className="inline-block uppercase font-medium text-xl mb-8">
+        Best Features
+      </h2>
+      <div className="flex justify-between mx-10">
+        <h1 className="uppercase text-4xl font-ubuntu font-semibold md:basis-1/2">
+          <span className="text-green-grad">key features </span>
+          of <br /> brandza mobile app
+        </h1>
+        <div className="basis-1/2 flex">
+          <span className="inline-block h-full w-3 rounded-lg btn-grad"></span>
+          <p className="ml-4">
+            Challenge yourself with engaging quizzes about your favorite South
+            African brands to discover how well you know them.
+          </p>
+        </div>
+      </div>
+      <div className="my-20 text-lg font-bold">
+        <div className="flex justify-between items-end  mb-10">
+          <div>
+            <Image
+              src={"/feature-1.png"}
+              width={470}
+              height={508}
+              alt="Feature"
+              className="w-96 h-full mx-auto"
+            />
+          </div>
+          <div>
+            <Image
+              src={"/feature-2.png"}
+              width={470}
+              height={508}
+              alt="Feature"
+              className="w-96 h-full mx-auto"
+            />
+          </div>
+          <Image
+            src={"/feature-3.png"}
+            width={470}
+            height={508}
+            alt="Feature"
+            className="w-96 h-full mx-auto"
+          />
+        </div>
+        <div className="flex w-full justify-between px-20">
+          <div>
+            <span className="px-4 py-2 rounded-full btn-grad inline-block mr-4">
+              1
+            </span>
+            <span>BrandZA Quizzes</span>
+          </div>
+          <div>
+            <span className="px-4 py-2 rounded-full btn-grad inline-block mr-4">
+              2
+            </span>
+            <span>Know which brand</span>
+          </div>
+          <div>
+            <span className="px-4 py-2 rounded-full btn-grad inline-block mr-4">
+              3
+            </span>
+            <span>Earn Star and Progress</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 function Brandza() {
   return (
     <div className="container 2xl:max-w-screen-2xl mx-auto flex gap-32 px-40 py-20">
@@ -220,7 +295,7 @@ function DownloadApp() {
             try on mobile
           </h6>
           <h1 className="font-ubuntu text-6xl text-white my-8">
-            Download our app for free
+            Download our <br /> app for free
           </h1>
 
           <div className="flex -ml-7">
