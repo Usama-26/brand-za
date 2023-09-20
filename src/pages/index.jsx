@@ -31,8 +31,9 @@ export default function Home() {
         width={2400}
         height={100}
         alt="Scroll Down"
-        className="absolute opacity-10 md:-mt-96 -mt-80 mx-auto"
+        className="absolute opacity-10 md:-mt-80 -mt-20 mx-auto"
       />
+      <div className="md:py-20 py-14"></div>
       <Brandza />
       <Offer />
       <CTA />
@@ -44,16 +45,16 @@ export default function Home() {
 
 function Hero() {
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto px-10 py-10 md:py-20  text-white md:text-left text-center flex flex-col md:flex-row md:gap-0 gap-8">
-      <div className="space-y-6 md:basis-1/2 md:mt-28">
+    <div className="container 2xl:max-w-screen-2xl mx-auto px-5 py-10 md:py-20  text-white md:text-left text-center flex flex-col md:flex-row md:gap-0 gap-8">
+      <div className="space-y-6 md:basis-1/2 md:mt-28 ">
         <h1
-          className={`"font-semibold md:text-6xl text-4xl tracking-wide uppercase font-ubuntu`}
+          className={`"font-semibold md:text-6xl text-3xl tracking-wide uppercase font-ubuntu`}
         >
           How much do you love
           <span className="text-grad"> Mzansi</span>?
         </h1>
 
-        <p className=" font-inter text-paragraph my-4 md:w-4/5">
+        <p className=" text-sm text-paragraph my-4 md:w-4/5">
           Test your knowledge of South African brandz, track your progress and
           learn more about the brandz you love.
         </p>
@@ -62,6 +63,7 @@ function Hero() {
           <span className="font-medium">Dowload Now</span>
         </button>
       </div>
+
       <div className=" md:basis-1/2">
         <Image
           src={"/hero-mockup.png"}
@@ -77,14 +79,14 @@ function Hero() {
 
 function Features() {
   return (
-    <div className="features ">
+    <div className="features">
       <div className="container 2xl:max-w-screen-2xl mx-auto md:px-10 px-5 pt-10 md:pt-20 ">
-        <span className="h-1 w-8 btn-grad inline-block mr-2 rounded-lg"></span>
-        <h2 className="inline-block uppercase font-medium md:text-xl text-lg mb-8">
+        <span className="h-1 mb-1 w-8 btn-grad inline-block mr-2 rounded-lg"></span>
+        <h2 className="inline-block uppercase font-medium md:text-xl text-lg mb-4">
           Best Features
         </h2>
         <div className="flex md:flex-row flex-col md:justify-between md:mx-10">
-          <h1 className="uppercase md:text-4xl text-2xl font-ubuntu font-semibold md:basis-1/2">
+          <h1 className="uppercase md:text-4xl text-3xl font-ubuntu font-semibold md:basis-1/2">
             <span className="text-green-grad">key features </span>
             of <br /> brandza mobile app
           </h1>
@@ -97,7 +99,7 @@ function Features() {
           </div>
         </div>
         <div className="my-20 text-lg font-bold">
-          <div className="flex justify-between md:flex-row flex-col md:gap-0  items-end text-center mb-10">
+          <div className="flex justify-between md:flex-row flex-col md:gap-0  items-end text-center mb-20">
             <div>
               <Image
                 src={"/feature-1.png"}
@@ -140,18 +142,16 @@ function Features() {
                 <span className="px-4 py-2 rounded-full btn-grad inline-block mr-4">
                   3
                 </span>
-                <span>Earn Star and Progress</span>
+                <span>Earn Star and Track Progress</span>
               </div>
             </div>
           </div>
-          <div className="flex w-full justify-between px-20 mb-20"></div>
-
           <Image
             src={"/down-btn.svg"}
             height={159}
             width={105}
             alt="Scroll Down"
-            className="w-20 mx-auto"
+            className="w-16 mx-auto"
           />
         </div>
       </div>
@@ -172,7 +172,7 @@ function Brandza() {
         <h6 className="uppercase font-medium text-green-grad tracking-wider">
           brandza
         </h6>
-        <h1 className="font-ubuntu text-5xl text-white my-4">
+        <h1 className="font-ubuntu md:text-5xl text-4xl text-white my-2">
           Master the World of ZA Brands
         </h1>
         <p className="text-paragraph">
@@ -208,7 +208,7 @@ function Offer() {
         <h6 className="uppercase font-medium text-green-grad tracking-wider">
           we offer
         </h6>
-        <h1 className="font-ubuntu text-5xl text-white my-4">
+        <h1 className="font-ubuntu md:text-5xl text-4xl text-white my-4">
           Your Brand, Your Way
         </h1>
         <p className="text-paragraph mb-4">
@@ -216,16 +216,16 @@ function Offer() {
         </p>
 
         <div className="flex flex-wrap gap-4">
-          <span className="inline-flex items-center">
-            <span className="h-1 w-8 green-grad inline-block mr-2 rounded-lg"></span>
+          <span className="inline-flex">
+            <span className="h-1 w-8 green-grad inline-block mr-2 mt-2 rounded-lg"></span>
             <span>Feature your brand</span>
           </span>
-          <span className="inline-flex items-center">
-            <span className="h-1 w-8 green-grad inline-block mr-2 rounded-lg"></span>
+          <span className="inline-flex">
+            <span className="h-1 w-8 green-grad inline-block mr-2 mt-2 rounded-lg"></span>
             <span>Advertising Banner</span>
           </span>
-          <span className="inline-flex items-center">
-            <span className="h-1 w-8 green-grad inline-block mr-2 rounded-lg"></span>
+          <span className="inline-flex">
+            <span className="h-1 w-8 green-grad inline-block mr-2 mt-2 rounded-lg"></span>
             <span>White-labeled version for your country & brand</span>
           </span>
         </div>
@@ -247,14 +247,14 @@ function CTA() {
         <h6 className="uppercase font-medium text-green-grad tracking-wider">
           contact us
         </h6>
-        <h1 className="font-ubuntu md:text-5xl text-2xl text-white my-4">
+        <h1 className="font-ubuntu md:text-5xl text-4xl text-white my-4">
           We help you to feature your brand in our platform
         </h1>
         <p className="text-paragraph">
           {`   Need an advertising banner or white-labeling for your brand on our platform? Contact us today, and let's make it happen. Your brand, your way.`}
         </p>
       </div>
-      <div className="md:mt-0 mt-20">
+      <div className="basis-1/3 md:mt-0 mt-20">
         <Form />
       </div>
     </div>
@@ -263,7 +263,7 @@ function CTA() {
 
 function Form() {
   return (
-    <form className="w-full rounded-xl bg-black p-8 flex flex-col gap-6">
+    <form className="md:w-96 w-full rounded-2xl bg-black p-8 flex flex-col gap-6">
       <input
         type="text"
         placeholder="First Name"
@@ -291,7 +291,9 @@ function Form() {
       />
 
       <button className="py-2 px-4 bg-black inline-flex items-center gap-2 mx-auto border rounded-full text-center">
-        <span className="font-medium text-white">Send Message</span>
+        <span className="font-medium text-white border-image">
+          Send Message
+        </span>
       </button>
     </form>
   );
@@ -300,31 +302,31 @@ function Form() {
 function DownloadApp() {
   return (
     <div className=" relative bg-black md:pt-32 pt-10">
-      <div className="container 2xl:max-w-screen-2xl mx-auto flex md:gap-40 gap-5 md:px-40 px-5">
+      <div className="container 2xl:max-w-screen-2xl mx-auto flex md:gap-32 gap-5 md:px-60 px-10">
         <Image
           src={"/download-section-mockup.png"}
           width={350}
           height={565}
           alt="Ellipse"
-          className="md:w-60 w-32 object-contain"
+          className="md:w-auto w-32 object-contain"
         />
 
         <div className="mt-10">
-          <h6 className="uppercase font-medium text-green-grad">
+          <h6 className="uppercase font-medium text-green-grad md:text-base text-xs">
             try on mobile
           </h6>
-          <h1 className="font-ubuntu md:text-6xl text-xl text-white md:my-8">
+          <h1 className="font-ubuntu md:text-[80px] md:leading-[98px] text-xl text-white md:my-4">
             Download our app for free
           </h1>
 
-          <div className="flex md:-ml-7">
+          <div className="flex md:-ml-7 -ml-3">
             <Link href={"#"}>
               <Image
                 src={"/app-store.png"}
                 width={310}
                 height={140}
                 alt="App store button"
-                className="md:w-full w-20"
+                className="md:w-60 w-24"
               />
             </Link>
             <Link href={"#"}>
@@ -333,7 +335,7 @@ function DownloadApp() {
                 width={310}
                 height={140}
                 alt="playstore button"
-                className="md:w-full w-20"
+                className="md:w-60 w-24"
               />
             </Link>
           </div>
@@ -344,14 +346,14 @@ function DownloadApp() {
         width={75}
         height={343}
         alt="Ellipse"
-        className="absolute left-0 top-0 md:w-auto w-10"
+        className="absolute left-0 top-0 md:w-auto w-6"
       />
       <Image
         src={"/ellipse-right.png"}
         width={85}
         height={361}
         alt="Ellipse"
-        className="absolute bottom-0 right-0 md:w-auto w-10"
+        className="absolute bottom-0 right-0 md:w-auto w-6"
       />
     </div>
   );
@@ -360,8 +362,8 @@ function DownloadApp() {
 function Footer() {
   return (
     <footer className=" ">
-      <div className="border-y border-dashed mt-32">
-        <div className="container 2xl:max-w-screen-2xl px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+      <div className="border-y border-dashed mt-20">
+        <div className="container 2xl:max-w-screen-2xl px-5 md:py-16 py-12 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
           <div className="md:w-1/3 w-full flex-shrink-0 md:mx-0 mx-auto ">
             <Link href={"/"}>
               <Image
@@ -415,6 +417,14 @@ function Footer() {
                     href={"#"}
                     className="text-gray-400 hover:text-gray-100"
                   >
+                    Feature your brand
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={"#"}
+                    className="text-gray-400 hover:text-gray-100"
+                  >
                     Download Now
                   </Link>
                 </li>
@@ -434,12 +444,11 @@ function Footer() {
               </h2>
               <nav className="list-none mb-10 space-y-4">
                 <li>
-                  Email: <br />
                   <Link
                     href={"#"}
                     className="text-gray-400 hover:text-gray-100"
                   >
-                    brandza@gmail.com
+                    admin@brandza.co.za
                   </Link>
                 </li>
                 <li>
@@ -447,12 +456,12 @@ function Footer() {
                     href={"#"}
                     className="text-gray-400 hover:text-gray-100"
                   >
-                    Phone: +0276567897
+                    +0276567897
                   </Link>
                 </li>
               </nav>
             </div>
-            <div className="lg:w-1/4 md:w-1/2 w-full  md:ml-20">
+            <div className="lg:w-1/4 md:w-1/2 w-full  md:ml-20 mb-10">
               <h2 className="title-font font-medium text-heading tracking-widest text-lg mb-3">
                 Follow us
               </h2>
