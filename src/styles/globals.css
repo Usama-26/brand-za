@@ -47,9 +47,9 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .breaker {
-    background-image: url("/wave.svg");
-    background-size: cover;
-    background-attachment: fixed;
+
+  .features {
+    background-image: url("/bg-landscape.png");
+    background-repeat: no-repeat;
   }
 }
