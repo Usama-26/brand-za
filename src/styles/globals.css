@@ -9,9 +9,7 @@
     scroll-behavior: smooth;
   }
 
-  .bg-screen {
-    background: url("/screen-bg.png");
-  }
+ 
 
   .text-grad {
     background-image: linear-gradient(to right, #026f47, #bd322c, #b99548);
@@ -52,8 +50,26 @@
     background-size: cover;
   }
 
-  .features {
-    background-image: url("/bg-landscape.png");
-    background-repeat: no-repeat;
+ 
+}
+
+
+.bg-screen {
+  background-image: url("/BG.png");
+  background-size: cover; /* This makes the background image cover the entire element */
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
+}
+@media screen and (max-width: 1024px) {
+  .bg-screen {
+   
+    background-size:auto; 
+  
   }
+}
+
+.features {
+  background: rgb(11,0,0);
+  background: linear-gradient(90deg, rgba(11,0,0,1) 0%, rgba(3,18,0,1) 50%, rgba(27,0,0,0.9080225840336135) 100%);
+  
+  
 }

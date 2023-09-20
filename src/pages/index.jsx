@@ -20,25 +20,30 @@ const ubuntu = Ubuntu({
 export default function Home() {
   return (
     <main
-      className={`${inter.variable} ${ubuntu.variable} bg-screen text-paragraph font-inter overflow-hidden`}
+      className={`${inter.variable} ${ubuntu.variable} features text-paragraph font-inter overflow-hidden`}
     >
       <MobileNavbar />
-      <Navbar />
-      <Hero />
+      <div className="bg-screen">
+        <Navbar />
+        <Hero />
+      </div>
       <Features />
       <Image
-        src={"/wave.svg"}
+        src={"/Vector.png"}
         width={2400}
         height={100}
         alt="Scroll Down"
-        className="absolute opacity-10 md:-mt-80 -mt-20 mx-auto"
+        className="absolute opacity-20 md:-mt-80 -mt-20 mx-auto 2xl:-mt-[500px]"
       />
-      <div className="md:py-20 py-14"></div>
+      <div className="md:py-20 py-14 "></div>
       <Brandza />
       <Offer />
       <CTA />
       <DownloadApp />
-      <Footer />
+      <div className="bg-[#171717] h-20" />
+      <div className="bg-[#171717] ">
+        <Footer />
+      </div>
     </main>
   );
 }
@@ -64,7 +69,7 @@ function Hero() {
         </button>
       </div>
 
-      <div className=" md:basis-1/2">
+      <div className=" md:basis-1/2 heroBG">
         <Image
           src={"/hero-mockup.png"}
           width={434}
@@ -160,13 +165,13 @@ function Features() {
 }
 function Brandza() {
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto flex md:flex-row flex-col md:gap-32 md:px-40 px-5 md:py-20 py-10">
+    <div className="container features 2xl:max-w-screen-2xl mx-auto flex md:flex-row flex-col md:gap-32 md:px-40 px-5 md:py-20 py-10 justify-center">
       <Image
         src={"/mockup-2.png"}
         width={434}
         height={740}
         alt="Ellipse"
-        className="md:w-96 w-60 mx-auto order-2 md:order-1"
+        className="md:w-[400px] md:h-[500px] w-60 mx-auto order-2 md:order-1"
       />
       <div className="md:mt-20 order-1 md:order-2">
         <h6 className="uppercase font-medium text-green-grad tracking-wider">
@@ -235,7 +240,7 @@ function Offer() {
         width={434}
         height={740}
         alt="Ellipse"
-        className="md:w-96 w-60 md:mt-0 mt-20 mx-auto"
+        className="md:w-[400px] md:h-[500px] w-60 md:mt-0 mt-20 mx-auto"
       />
     </div>
   );
@@ -361,8 +366,8 @@ function DownloadApp() {
 
 function Footer() {
   return (
-    <footer className=" ">
-      <div className="border-y border-dashed mt-20">
+    <footer className="">
+      <div className="border-y border-dashed ">
         <div className="container 2xl:max-w-screen-2xl px-5 md:py-16 py-12 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
           <div className="md:w-1/3 w-full flex-shrink-0 md:mx-0 mx-auto ">
             <Link href={"/"}>
@@ -486,7 +491,10 @@ function Footer() {
       <div className="container mx-auto py-4 px-5 flex md:flex-row md:justify-between gap-2 flex-col justify-between md:text-left text-center text-sm">
         <p className="">Copyrights 2023 @ All Rights Reserved</p>
         <p>
-          Crafted by <Link href={"mrrobotdev.com"}>mrrobotdev.com</Link>
+          Crafted by{" "}
+          <a href={"https://mrrobotdev.com"} target="_blank">
+            mrrobotdev.com
+          </a>
         </p>
       </div>
     </footer>
