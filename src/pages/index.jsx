@@ -302,20 +302,20 @@ function Form() {
 function DownloadApp() {
   return (
     <div className=" relative bg-black md:pt-32 pt-10">
-      <div className="container 2xl:max-w-screen-2xl mx-auto flex md:gap-32 gap-5 md:px-60 px-10">
+      <div className="container 2xl:max-w-screen-2xl mx-auto flex md:gap-24 gap-5 md:px-48 px-10">
         <Image
           src={"/download-section-mockup.png"}
           width={350}
           height={565}
           alt="Ellipse"
-          className="md:w-auto w-32 object-contain"
+          className="md:w-72 w-32 object-contain"
         />
 
         <div className="mt-10">
           <h6 className="uppercase font-medium text-green-grad md:text-base text-xs">
             try on mobile
           </h6>
-          <h1 className="font-ubuntu md:text-[80px] md:leading-[98px] text-xl text-white md:my-4">
+          <h1 className="font-ubuntu md:text-6xl text-xl text-white md:my-4">
             Download our app for free
           </h1>
 
@@ -379,13 +379,14 @@ function Footer() {
               Download now
             </p>
 
-            <div className="hidden md:flex -ml-7">
+            <div className="flex md:-ml-7 -ml-3">
               <Link href={"#"}>
                 <Image
                   src={"/app-store.png"}
                   width={310}
                   height={140}
                   alt="App store button"
+                  className="md:w-40 w-24"
                 />
               </Link>
               <Link href={"#"}>
@@ -394,6 +395,7 @@ function Footer() {
                   width={310}
                   height={140}
                   alt="playstore button"
+                  className="md:w-40 w-24"
                 />
               </Link>
             </div>

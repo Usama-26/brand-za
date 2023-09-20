@@ -21,6 +21,10 @@
   .btn-grad {
     background-image: linear-gradient(110deg, #026f47 30%, #bd322c, #b99548);
   }
+  /* .btn-grad {
+    background-image: linear-gradient(110deg, #ca0e0ec0 30%, #ff0800, #ff1e00);
+  } */
+
   .text-green-grad {
     background: var(
       --Text-Color,
